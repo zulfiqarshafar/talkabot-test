@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: white;
+  /*min-height: 1500px;*/
+}
+
+.banner {
+  position: relative;
+  top: 15rem;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  /*border: 2px solid red;*/
+}
+
+.banner h1 {
+  font-size: 50px;
+  font-family: sans-serif;
+}
+
+@media (max-width: 599px), (orientation: portrait)  {
+  .banner h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 479px), (orientation: portrait)  {
+  .banner {
+    top: 5rem; 
+  } 
+}
+
+.chatBtn {
+  position: fixed;
+  z-index: 1;
+  /*float: right;*/
+  right: 30px;
+  bottom: 20px;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 25px;
+
+  color: white;
+  background-color: rgba(23, 58, 52,1);
+  font-size: 14px;
+  border: none;
+  box-shadow: 3px 3px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+.chatBtn:hover {
+  background-color: rgba(54, 132, 119, 0.7);
+  cursor: pointer;
+}
+
+.iconOpenChat {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Candara', sans-serif;
+}
+
+.iconCloseChat {
+  width: 1rem;
+  height: 1rem;
+}
+
+.chatFrame {
+  background-color: rgba(23, 58, 52,1);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: fixed;
+  z-index: 2;
+  float: right;
+  right: 30px;
+  bottom: 100px;
+
+  height: 80%;
+  width: 25rem;
+
+  box-shadow: -2px -2px 20px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+.chatFrame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+.chatFrame .miniBtn {
+  display: none;
+}
+
+@media (max-width: 767px), (orientation: portrait) {
+  .chatFrame {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .chatFrame .miniBtn {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    background: none;
+    border: none;
+    cursor:pointer;
+  }
+
+  .miniBtn .iconMiniBtn {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
